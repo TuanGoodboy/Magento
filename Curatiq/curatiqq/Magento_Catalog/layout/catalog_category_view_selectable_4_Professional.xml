@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="page.wrapper">
+            <container name="rev-banner-wrapper" as="rev-banner-wrapper" label="rev banner wrapper"  htmlTag="div" htmlClass="rev-banner-wrapper" after="header.container" />
+        </referenceContainer>
+        <referenceBlock name="rev-banner-wrapper">
+            <block class="Magento\Framework\View\Element\Template" name="rev-banner-wrapper-content" template="Magento_Catalog::professional/rev-banner-wrapper.phtml" />
+        </referenceBlock>
+        <referenceContainer name="main.content">
+            <container name="category-view" as="category-view" label="category view"  htmlTag="div" htmlClass="category-view" after="rev-banner-wrapper"/>
+        </referenceContainer>
+        <referenceContainer name="category-view">
+            <container name="category-description-flex-flex_wrap-flex_column" as="category-description-flex-flex_wrap-flex_column" label="category-description flex flex_wrap flex_column"  htmlTag="div" htmlClass="category-description flex flex_wrap flex_column" />
+        </referenceContainer>
+        <referenceBlock name="category-description-flex-flex_wrap-flex_column">
+            <block class="Magento\Framework\View\Element\Template" name="category-description__left" template="Magento_Catalog::professional/category-description__left.phtml" />
+        </referenceBlock>
+        <referenceContainer name="category-view">
+            <container name="category-cms" as="category-cms" label="category cms"  htmlTag="div" htmlClass="category-cms" />
+        </referenceContainer>
+        <referenceContainer name="category-cms">
+            <container name="cms-professional-products" as="cms-professional-products" label="cms-professional-products"  htmlTag="div" htmlClass="cms-professional-products" />
+        </referenceContainer>
+        <referenceBlock name="cms-professional-products">
+            <block class="Magento\Framework\View\Element\Template" name="session-professional2" template="Magento_Catalog::professional/session-professional2.phtml" />
+        </referenceBlock>
+        <referenceContainer name="cms-professional-products">
+            <container name="session-professional3" as="session-professional3" label="session-professional3"  htmlTag="div" htmlClass="session-professional3" after="session-professional2" />
+        </referenceContainer>
+        <referenceBlock name="session-professional3">
+            <block class="Testimonial\Slide\Block\Widget\Testimonial" name="session-professional3-content" template="Testimonial_Slide::profress_testimonial.phtml" />
+        </referenceBlock>
+        <referenceBlock name="cms-professional-products">
+            <block class="Testimonial\Slide\Block\Widget\Testimonial" name="session-professional4-content" template="Magento_Catalog::professional/session-professional4.phtml" />
+        </referenceBlock>
+        <referenceContainer name="cms-professional-products">
+            <container name="session-professional5" as="session-professional5" label="session-professional5"  htmlTag="div" htmlClass="session-professional5" after="session-professional4-content" />
+        </referenceContainer>
+        <referenceBlock name="session-professional5">
+            <block class="Magento\Contact\Block\ContactForm" name="session-professional5-content" template="Magento_Contact::form.phtml" />
+        </referenceBlock>
+        <referenceContainer name="page.wrapper">
+            <container name="container-fulls" as="container-fulls" label="container-fulls"  htmlTag="div" htmlClass="container-fulls" after="main.content" />
+        </referenceContainer>
+        <referenceBlock name="container-fulls">
+            <block class="Magento\Framework\View\Element\Template" name="about-need-help" template="Magento_Catalog::about-need-help.phtml"/>
+        </referenceBlock>
+        <referenceBlock name="page.main.title" remove="true" />
+        <referenceBlock name="columns" remove="true" /> 
+        <referenceBlock name="breadcrumbs" remove="true" /> 
+    </body>
+</page> 

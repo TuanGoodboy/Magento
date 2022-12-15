@@ -1,0 +1,35 @@
+<div class="header-wellcome" id="myHeader">
+    <div class="sliderr">
+        <p>FREE LOCAL SHIPPING on orders over SGD60</p>
+        <p>SIGN UP for our newsletter and unlock 15% OFF your first order</p>
+        <p>Receive 50 REWARD POINTS instantly when you register</p>
+    </div>
+</div>
+
+<script>
+	require(['jquery', 'jquery/ui', 'slick'], function($) {
+    $(document).ready(function() {
+        $(".sliderr").slick({
+            autoplay:true,
+            autoplaySpeed:5000,
+            arrows:false,
+            centerMode:false,
+            slidesToShow:1,
+            slidesToScroll:1
+        });
+    });
+});
+</script>	
+<script>
+    window.onscroll = function() {myFunction()};
+    var panelheader = document.getElementById("myHeader");
+    var sticky = panelheader.offsetTop;
+    function myFunction() {
+    if (window.pageYOffset > sticky) {
+        // console.log(window.pageYOffset);
+        panelheader.classList.add("sticky")
+    } if(window.pageYOffset <= sticky) {
+        panelheader.classList.remove("sticky");
+    }
+    }
+</script>

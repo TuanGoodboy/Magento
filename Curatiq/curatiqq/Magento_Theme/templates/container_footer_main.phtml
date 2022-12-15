@@ -1,0 +1,83 @@
+<div class="container_footer_main">
+    <div class="col-footer footer_stay_connected">
+        <h3>Stay Connected</h3>
+        <ul>
+            <li class="facebook">
+                <a title="Facebook" href="https://www.facebook.com/curatiq" target="_blank" rel="noopener">Facebook</a>
+            </li>
+            <li class="instagram">
+                <a title="Instagram" href="https://www.instagram.com/curatiq" target="_blank" rel="noopener">Instagram</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-footer footer_shop">
+        <h3>Shop</h3>
+        <ul>
+            <li>
+                <a href="https://www.curatiq.com/e-shop.html/">All Products</a>
+            </li>
+            <li>
+                <a href="https://www.curatiq.com/gift-card.html/">Gift Card</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-footer footer_company">
+        <h3>Company</h3>
+        <ul>
+            <li>
+                <a title="About Us" href="https://www.curatiq.com/about-us.html/">About Us</a>
+            </li>
+            <li>
+                <a title="Press" href="https://www.curatiq.com/press.html/">Press</a>
+            </li>
+            <li>
+                <a title="Journal" href="https://www.curatiq.com/blog/">Journal</a>
+            </li>
+            <li>
+                <a title="Terms &amp; Conditions" href="https://www.curatiq.com/terms-conditions/">Terms &amp; Conditions</a>
+            </li>
+            <li>
+                <a title="Privacy Policy" href="https://www.curatiq.com/privacy-policy/">Privacy Policy</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-footer footer_customer_service">
+        <h3>Customer Service</h3>
+            <ul>
+            <li><a title="FAQs" href="https://www.curatiq.com/faq/">FAQs</a></li>
+            <li><a title="Shipping &amp; Delivery" href="https://www.curatiq.com/shipping-delivery.html/">Shipping &amp; Delivery</a></li>
+            <li><a title="Returns &amp; Exchanges" href="https://www.curatiq.com/returns-exchanges.html/">Returns &amp; Exchanges</a></li>
+            <li><a title="Contact Us" href="https://www.curatiq.com/contact-us/">Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="col-footer"> 
+        <div class="block newsletter">
+            <h3>Subscribe To Our Newsletter</h3>
+            <p>Enjoy <strong>15% off</strong> your first purchase!</p>
+            <div class="content">
+                <form class="form subscribe"
+                    novalidate
+                    action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>"
+                    method="post"
+                    data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+                    id="newsletter-validate-detail">
+                    <div class="field newsletter">
+                        <div class="control_newsletter">
+                            <input name="email" type="email" id="newsletter" class="mage-error"
+                                placeholder="<?= $block->escapeHtml(__('Your Email Address')) ?>"
+                                data-mage-init='{"mage/trim-input":{}}'
+                                data-validate="{required:true, 'validate-email':true}"
+                            />
+                            <button class="action subscribe"
+                                    title="SUBMIT"
+                                    type="submit"
+                                    aria-label="Subscribe">
+                                <span><?= $block->escapeHtml(__('SUBMIT')) ?></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

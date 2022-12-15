@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+    <referenceContainer name="header.panel">
+        <block class="Magento\Cms\Block\Block" name="block_identifier">
+            <arguments>
+                <argument name="block_id" xsi:type="string">topbar</argument>
+            </arguments>
+        </block>
+    </referenceContainer>
+    <referenceBlock name="logo">
+        <arguments>
+            <argument name="logo_width" xsi:type="number">300</argument>
+        </arguments>
+    </referenceBlock>
+    <referenceContainer name="header.container">
+        <container name="header.middle" as="header-middle" label="Page Header Container"  htmlTag="div" htmlClass="header-middle" after="header.panel.wrapper"/>
+    </referenceContainer>
+    <referenceContainer name="header.container">
+        <container name="header.middle.container" as="header-middle.container" label="Page Header Middle Container"  htmlTag="div" htmlClass="header-middle-container" after="header.panel.wrapper"/>
+    </referenceContainer>
+    <referenceContainer name="header.container">
+        <container name="header.logo" as="header-logo" label="Page Header logo"  htmlTag="div" htmlClass="header-logo" after="header.panel.wrapper"/>
+    </referenceContainer>
+    <referenceContainer name="header.container">
+        <container name="header.right" as="header-right" label="Page Header right"  htmlTag="div" htmlClass="header-right" after="header.logo"/>
+    </referenceContainer>
+    <referenceContainer name="header.container">
+        <container name="header.menu" as="header-menu" label="Page Header menu"  htmlTag="div" htmlClass="header-menu" after="header.middle"/>
+    </referenceContainer>
+    <referenceContainer name="header.container">
+        <container name="header.menu.container" as="header-menu-container" label="Page Header menu container"  htmlTag="div" htmlClass="header-menu-container" after="header.middle"/>
+    </referenceContainer>
+    <referenceContainer name="columns">
+        <container name="new.position" as="new-position" label="new position"  htmlTag="div" htmlClass="home-product" after="home-cate-wrapper"/>
+    </referenceContainer>
+    <referenceContainer name="columns">
+        <container name="home.testimonials" as="home-testimonials" label="home testimonials"  htmlTag="div" htmlClass="home-testimonials" after="home-about-wrapper"/>
+    </referenceContainer>
+        <referenceContainer name="footer">
+        <container name="footer_site" as="footer_site" label="footer_site"  htmlTag="div" htmlClass="footer_site" after="footer-guaranteed"/>
+    </referenceContainer>
+    <referenceBlock name="header.menu.container">
+        <block class="Magento\Framework\View\Element\Template" name="dropdown-menu" template="Magento_Theme::dropdownmenu.phtml" after="navigation.sections"/>
+    </referenceBlock> 
+    <referenceBlock name="columns">
+        <block class="Magento\Framework\View\Element\Template" name="home-cate-wrapper" template="Magento_Theme::home-cate-wrapper.phtml"/>
+    </referenceBlock> 
+    <referenceBlock name="columns">
+        <block class="Magento\Framework\View\Element\Template" name="home-about-wrapper" template="Magento_Theme::home-about-wrapper.phtml"/>
+    </referenceBlock>
+    <referenceBlock name="columns">
+        <block class="Magento\Framework\View\Element\Template" name="home-newsletter" template="Magento_Theme::home-newsletter.phtml" after="home-testimonials"/>
+    </referenceBlock>
+    <referenceBlock name="footer">
+        <block class="Magento\Framework\View\Element\Template" name="footer-guaranteed" template="Magento_Theme::footer_guaranteed.phtml" before="copyright"/>
+    </referenceBlock>
+    <referenceContainer name="footer_site">
+        <container name="footer_site_container" as="container" label="footer_site_container"  htmlTag="div" htmlClass="container"/>
+    </referenceContainer>
+    <referenceBlock name="footer_site_container">
+        <block class="Magento\Framework\View\Element\Template" name="footer-site-container" template="Magento_Theme::container_footer_main.phtml"/>
+    </referenceBlock>
+    <referenceContainer name="footer">
+        <container name="bottom_footer" as="bottom_footer" label="bottom_footer"  htmlTag="div" htmlClass="bottom_footer" after="footer_site"/>
+    </referenceContainer>
+    <referenceContainer name="bottom_footer">
+        <container name="bottom_footer_container" as="bottom_footer_container" label="bottom_footer_container"  htmlTag="div" htmlClass="container" after="footer_site"/>
+    </referenceContainer>
+    <referenceBlock name="bottom_footer_container">
+        <block class="Magento\Framework\View\Element\Template" name="to-top" template="Magento_Theme::to-top.phtml" after="bottom_footer"/>
+    </referenceBlock>
+    <referenceBlock name="page.wrapper">
+        <block class="Magento\Framework\View\Element\Template" name="rev-banner-wrapper" template="Magento_Catalog::rev-banner-wrapper.phtml" after="page-header"/>
+    </referenceBlock>
+    <move element="top.search" destination="top.links" />
+    <move element="minicart" destination="top.links" />  
+    <move element="logo" destination="header.logo"/> 
+    <move element="header.logo" destination="header.middle.container"/> 
+    <move element="header.right" destination="header.middle.container"/>
+    <move element="header.middle.container" destination="header.middle"/>
+    <move element="navigation.sections" destination="header.menu.container"/>
+    <move element="header.menu.container" destination="header.menu"/>
+    <move element="dropdown-menu" destination="header.menu.container" after="navigation.sections"/>
+    <move element="footer_links" destination="container_footer_main"/>
+    <move element="store_switcher" destination="container_footer_main"/>
+    <move element="form.subscribe" destination="container_footer_main" />
+    <move element="copyright" destination="bottom_footer_container" />
+    <move element="top.search" destination="header.right" before="authorization-link"/>
+    <move element="authorization-link" destination="header.right"  after="top.search"/>
+    <move element="wish-list-link" destination="header.right" after="authorization-link"/>
+    <move element="minicart" destination="header.right" after="wish-list-link"/>
+    <referenceBlock name="my-account-link" remove="true" /> 
+    <referenceBlock name="top.links" remove="true" /> 
+    <referenceBlock name="advanced-search-link" remove="true"/>
+    <referenceBlock name="register-link" remove="true"/>
+    </body>
+</page> 
+
+<!-- <?xml version="1.0"?>
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
+    <update handle="3columns"/>
+    <referenceContainer name="page.wrapper">
+        <container name="footer-bottom" as="footer-bottom" after="footer" label="Footer Bottom" htmlTag="footer" htmlClass="page-footer-bottom">
+            <container name="footer-bottom-content" as="footer-bottom-content" htmlTag="div" htmlClass="footer content" />
+        </container>
+    </referenceContainer>
+</layout> -->

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="page.wrapper">
+            <container name="rev-banner-wrapper" as="rev-banner-wrapper" label="rev banner wrapper"  htmlTag="div" htmlClass="rev-banner-wrapper" after="header.container"/>
+        </referenceContainer>
+        <referenceContainer name="main.content">
+            <container name="category-view" as="category-view" label="category view"  htmlTag="div" htmlClass="category-view" after="rev-banner-wrapper"/>
+        </referenceContainer>
+        <referenceContainer name="category-view">
+            <container name="category-cms" as="category-cms" label="category cms"  htmlTag="div" htmlClass="category-cms" />
+        </referenceContainer>
+        <referenceBlock name="category-cms">
+            <block class="Magento\Framework\View\Element\Template" name="session1" template="Magento_Catalog::session1.phtml"/>
+        </referenceBlock>
+        <referenceBlock name="category-cms">
+            <block class="Magento\Framework\View\Element\Template" name="session2" template="Magento_Catalog::session2.phtml"/>
+        </referenceBlock>
+        <referenceBlock name="category-cms">
+            <block class="Magento\Framework\View\Element\Template" name="session3" template="Magento_Catalog::session3.phtml"/>
+        </referenceBlock>
+        <referenceBlock name="category-cms">
+            <block class="Magento\Framework\View\Element\Template" name="session4" template="Magento_Catalog::session4.phtml"/>
+        </referenceBlock>
+        <referenceBlock name="category-cms">
+            <block class="Magento\Framework\View\Element\Template" name="session5" template="Magento_Catalog::session5.phtml"/>
+        </referenceBlock>
+        <referenceBlock name="rev-banner-wrapper">
+            <block class="Magento\Framework\View\Element\Template" name="rev-banner-wrapper-content" template="Magento_Catalog::rev-banner-wrapper.phtml"/>
+        </referenceBlock>
+        <referenceContainer name="page.wrapper">
+            <container name="container-fulls" as="container-fulls" label="container fulls"  htmlTag="div" htmlClass="container-fulls" after="main.content" />
+        </referenceContainer>
+        <referenceBlock name="container-fulls">
+            <block class="Magento\Framework\View\Element\Template" name="about-need-help" template="Magento_Catalog::about-need-help.phtml"/>
+        </referenceBlock>
+        <referenceBlock name="page.main.title" remove="true" />
+        <referenceBlock name="columns" remove="true" /> 
+        <referenceBlock name="breadcrumbs" remove="true" /> 
+    </body>
+</page> 
