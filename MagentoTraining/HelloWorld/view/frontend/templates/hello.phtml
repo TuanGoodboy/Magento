@@ -1,0 +1,14 @@
+<?php
+$text = $this->helper('MagentoTraining\HelloWorld\Helper\Data')
+    ->getConfig('helloworld/general/display_text');
+$textarea = $this->helper('MagentoTraining\HelloWorld\Helper\Data')
+    ->getConfig('helloworld/general/textarea_example');
+$helper = $this->helper('MagentoTraining\HelloWorld\Helper\Data');
+$imgSystem = $helper->getConfigModule('helloworld/general/upload_image');
+$urlMedia = $helper->getBaseUrlMedia();
+$enabledModule = $helper->getConfigModule('helloworld/general/enabled');
+?>
+<h3><?php echo $text; ?></h3>
+<p><?php echo $textarea; ?></p>
+<img src="<?php echo $urlMedia.'helloworld/image/default/men_top.jpg'. $imgSystem?>" >
+
