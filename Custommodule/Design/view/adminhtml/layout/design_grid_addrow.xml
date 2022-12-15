@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<head>
+     <title>
+         Designer Form
+     </title>
+</head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Custommodule\Design\Block\Adminhtml\Grid\AddRow" name="add_row" />
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="Custommodule\Design\Block\Adminhtml\Grid\Edit\Tabs" name="Custommodule_design_grid_edit_tab">
+                <block class="Custommodule\Design\Block\Adminhtml\Grid\Edit\Tab\Designer" name="Custommodule_design_grid_edit_tab_designer"/>
+                <block class="Custommodule\Design\Block\Adminhtml\Grid\Edit\Tab\Designs" name="Custommodule_design_grid_edit_tab_designs"/>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">designer</argument>
+                    <argument name="block" xsi:type="string">design_grid_edit_tab_designer</argument>
+                </action>
+                 <action method="addTab">
+                    <argument name="name" xsi:type="string">designs</argument>
+                    <argument name="block" xsi:type="string">design_grid_edit_tab_designs</argument>
+                </action>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

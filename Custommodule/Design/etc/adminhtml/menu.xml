@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Custommodule_Design::menu" title="Custom Design" module="Custommodule_Design" sortOrder="11" resource="Custommodule_Design::menu" />
+        <add id="Custommodule_Design::add_row" title="Designer" module="Custommodule_Design" sortOrder="1" parent="Custommodule_Design::menu" action="design/grid" resource="Custommodule_Design::add_row"/>
+        <add id="Custommodule_Design::add_post" title="Designs" module="Custommodule_Design" sortOrder="2" parent="Custommodule_Design::menu" action="design/post" resource="Custommodule_Design::add_post"/>
+    </menu>
+</config>
